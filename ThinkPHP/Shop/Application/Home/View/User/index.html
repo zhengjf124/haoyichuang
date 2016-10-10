@@ -1,0 +1,108 @@
+<include file="Public:head"/>
+<body>
+	<!--
+    	作者：181331251@qq.com
+    	时间：2016-08-27
+    	描述：头部
+    -->
+	<header class="bg_none">
+		<a href="{:U('Index/index')}"><div class="back" ></div></a>
+		个人中心
+	</header>
+	
+	<section class="spokesman">		
+		<div class="header_ico bg_none" style="height: 6rem;">
+			<img src="{$user_info.headimgurl}">
+			<div class="text">
+				<h1>{$user_info.nick_name}</h1>
+				<code><!-- {$user_level} -->{$info}</code>
+			</div>
+		</div>	
+	</section>
+	
+	<div class="center_bg"></div>
+	<section class="center">
+		<ul class="my_price_ul">
+			<div class="line"></div>
+			<li>
+				<div class="cont">
+					<h1>销售额  </h1>
+					<p>{$sales}<code>元</code></p>
+				</div>				
+			</li>	
+			<li>
+				<div class="cont">
+					<h1>我的奖励  </h1>
+					<p>{$reward}<code>元</code></p>
+				</div>				
+			</li>	
+		</ul>
+
+		<ul class="list_ul">			
+			<li>
+				<div class="before_ico"><img src="__PUBLIC__/home/images/center_ico_address.png"></div>
+				<a href="{:U('Useraddr/index')}">收货地址管理</a>
+				<div class="after_ico"></div>
+			</li>
+			<li>
+				<div class="before_ico"><img src="__PUBLIC__/home/images/center_ico_order.png"></div>
+				<a href="{:U('Order/index')}">我的订单</a>
+				<div class="after_ico"></div>
+			</li>				
+		</ul>
+		
+
+		<ul class="list_ul">			
+			<li>
+				<div class="before_ico"><img src="__PUBLIC__/home/images/center_ico_diyuan.png"></div>
+				<a href="{:U('User/spokesman')}">我的会员</a>
+				<div class="after_ico"></div>
+			</li>			
+			<li>
+				<div class="before_ico"><img src="__PUBLIC__/home/images/center_ico_tuiguan.png"></div>
+				<a href="{:U('User/extension')}">推广收益明细</a>
+				<div class="after_ico"></div>
+			</li>
+			<li>
+				<div class="before_ico"><img src="__PUBLIC__/home/images/center_ico_tuiguan.png"></div>
+				<a href="{:U('User/qrcode')}">推广二维码</a>
+				<div class="after_ico"></div>
+			</li>
+		</ul>
+		
+		
+		<ul class="list_ul">
+			<li>
+				<div class="before_ico"><img src="__PUBLIC__/home/images/center_ico_price.png"></div>
+				<a href="{:U('User/wealth')}">我的财富</a>
+				<div class="after_ico"></div>
+			</li>
+			<li>
+				<div class="before_ico"><img src="__PUBLIC__/home/images/center_ico_tixian.png"></div>
+				<a href="{:U('User/withdraw')}">申请提现</a>
+				<div class="after_ico"></div>
+			</li>	
+		</ul>
+	</section>
+	
+	
+	<div class="clear" style="height:6rem;"></div>
+
+	<div class="footer">
+		<a href="{:U('Index/index')}"><img src="__PUBLIC__/home/images/new_home.png" class="img1"><img
+				src="__PUBLIC__/home/images/new_home_active.png" class="img2">
+			<h3>商城</h3></a>
+		<a href="{:U('Goods/categoryList')}"><img src="__PUBLIC__/home/images/new_cate.png" class="img1"><img
+				src="__PUBLIC__/home/images/new_cate_active.png" class="img2">
+			<h3>分类</h3></a>
+		<a href="{:U('Cart/index')}"><img src="__PUBLIC__/home/images/new_cart.png" class="img1"><img
+				src="__PUBLIC__/home/images/new_cart_active.png" class="img2">
+			<h3>购物车</h3></a>
+		<a href="{:U('User/index')}" class="active"><img src="__PUBLIC__/home/images/new_user.png" class="img1"><img
+				src="__PUBLIC__/home/images/new_user_active.png" class="img2">
+			<h3>个人中心</h3></a>
+	</div>
+
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<include file="Public:head"/>
+<body>
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-27
+    描述：头部
+-->
+<header>
+    <a href="{:U('User/index')}">
+        <div class="back" ></div>
+    </a>
+    我的会员
+</header>
+
+<section class="wealth">
+    <article class="tixian_list" style="margin-top: 0px; border-top:0px;">
+        <ul class="tixian_tab_title">
+            <li>订单编号</li>
+            <li>下级名称</li>
+            <li>提成金额</li>
+        </ul>
+
+        <div class="list_box">
+            <volist name="list" id="vo">
+                <ul class="list">
+                    <li>{$vo.order_sn}</li>
+                    <li>{$vo.nickname}</li>
+                    <li>￥{$vo.money}</li>
+                </ul>
+            </volist>
+        </div>
+    </article>
+
+    <button onclick="location.href='{:U('User/withdraw')}'"  class="tixian">我要提现</button>
+</section>
+
+
+<div class="clear" style="height:6rem;"></div>
+
+
+</body>
+
+</html>

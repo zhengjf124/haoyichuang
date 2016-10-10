@@ -1,0 +1,62 @@
+<include file="Public:head"/>
+<body>
+    <div class="container ct-pdt ct-pdb">
+        <!--顶部-->
+        <div class="header">
+            <div class="new-search">
+                <input type="text" name="" class="txt" placeholder="请输入关键词">
+                <input type="submit" name="" class="btn" value="">
+            </div>
+            <a href="{:U('User/qrcode')}" class="qr-code"></a>
+        </div>
+        <!--顶部:over-->
+        <!--左边-->
+        <div class="cate-left">
+            <volist name="list" id="vo">
+                <a href="{:U('Goods/categoryList',array('pid'=>$vo['id']))}" <if condition="$vo.show eq 1"> class="active" </if> >{$vo.type_name}</a>
+            </volist>
+        </div>
+        <!--左边:over-->
+        <!--右边-->
+        <div class="cate-right">
+            <div class="title">热门分类</div>
+            <div class="items">
+                <volist name="second_list" id="vo">
+                    <a href="{:U('Goods/goodsList',array('cid'=>$vo['id']))}">
+                        <div class="img"><span></span><img src="{$vo.type_img}"></div>
+                        <h3>{$vo.type_name}</h3>
+                    </a>
+                </volist>
+            </div>
+        </div>
+        <!--右边:over-->
+        <!--底部-->
+        <div class="footer">
+            <a href="{:U('Index/index')}"><img src="__PUBLIC__/home/images/new_home.png" class="img1"><img src="__PUBLIC__/home/images/new_home_active.png" class="img2">
+                <h3>商城</h3></a>
+            <a href="{:U('Goods/categoryList')}" class="active"><img src="__PUBLIC__/home/images/new_cate.png" class="img1"><img src="__PUBLIC__/home/images/new_cate_active.png" class="img2">
+                <h3>分类</h3></a>
+            <a href="{:U('Cart/index')}"><img src="__PUBLIC__/home/images/new_cart.png" class="img1"><img
+                    src="__PUBLIC__/home/images/new_cart_active.png" class="img2">
+                <h3>购物车</h3></a>
+            <a href="{:U('User/index')}"><img src="__PUBLIC__/home/images/new_user.png" class="img1"><img
+                    src="__PUBLIC__/home/images/new_user_active.png" class="img2">
+                <h3>个人中心</h3></a>
+        </div>
+        <!--底部:over-->
+    </div>
+    <script src="js/jquery.nicescroll.js"></script>
+    <script>
+    		//滚动条样式
+            $(".cate-left").niceScroll({
+                cursorcolor: "",
+                cursoropacitymax: 1,
+                touchbehavior: true,
+                cursorwidth: "5px",
+                cursorborder: "0",
+                cursorborderradius: "5px"
+            });
+    </script>
+</body>
+
+</html>

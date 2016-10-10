@@ -1,0 +1,79 @@
+<include file="Public:head"/>
+<style>
+    .active{
+        font-size: 1.2rem; color: #ee2e49;
+    }
+</style>
+<body>
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-27
+    描述：头部
+-->
+<header>
+    <a>
+        <if condition="$type eq 'order'">
+            <div class="back" onclick="history.go(-1)"></div>
+            <else/>
+            <div class="back" onclick="location.href='{:U('User/index')}'"></div>
+        </if>
+    </a>
+    收货地址
+</header>
+
+
+<section class="address">
+    <if condition="$type eq 'order'">
+        <ul class="address_list_ul">
+            <volist name="address_list" id="vo">
+                <li>
+                    <h1 onclick="location.href='{:U('Order/confirm',array('address_id'=>$vo['id']))}'">
+                        {$vo.consignee}&nbsp;&nbsp;&nbsp;{$vo.mobile}</h1>
+                    <p onclick="location.href='{:U('Order/confirm',array('address_id'=>$vo['id']))}'">
+                        {$vo.address}</p>
+                    <div class="bt_group">
+                        <if condition="$vo['is_default'] eq 1">
+                            <span class="moren active">默认地址</span>
+                            <else/>
+                            <span class="moren">设为默认地址</span>
+                        </if>
+                        <code>
+                            <span onclick="location.href='{:U('Useraddr/edit',array('type'=>$_GET['type'],'address_id'=>$vo['id']))}'"
+                                  class="button"><img src="__PUBLIC__/home/images/address_edit.png"> 修改</span>
+                            <span data-id="{$vo.id}" class="button btn-delete"><img
+                                    src="__PUBLIC__/home/images/address_del.png"> 删除</span>
+                        </code>
+                    </div>
+                </li>
+            </volist>
+        </ul>
+        <else/>
+        <ul class="address_list_ul">
+            <volist name="address_list" id="vo">
+                <li>
+                    <h1>{$vo.consignee}&nbsp;&nbsp;&nbsp;{$vo.mobile}</h1>
+                    <p>{$vo.address}</p>
+                    <div class="bt_group">
+                        <if condition="$vo['is_default'] eq 1">
+                            <span class="moren active">默认地址</span>
+                            <else/>
+                            <span class="moren">设为默认地址</span></if>
+                        <code>
+                            <span onclick="location.href='{:U('Useraddr/edit',array('type'=>$_GET['type'],'address_id'=>$vo['id']))}'"
+                                  class="button"><img src="__PUBLIC__/home/images/address_edit.png"> 修改</span>
+                            <span data-id="{$vo.id}" class="button btn-delete"><img
+                                    src="__PUBLIC__/home/images/address_del.png"> 删除</span>
+                        </code>
+                    </div>
+                </li>
+            </volist>
+        </ul>
+    </if>
+    <div onclick="location.href='{:U('Useraddr/add',array('type'=>$_GET['type']))}'" class="bt_bottom">新增收货地址</div>
+</section>
+
+<div class="clear" style="height:6rem;"></div>
+
+</body>
+<script src="__PUBLIC__/home/js/myAjax.js"></script>
+</html>

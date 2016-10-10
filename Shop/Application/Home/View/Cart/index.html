@@ -1,0 +1,100 @@
+<include file="Public:head"/>
+<body>
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-27
+    描述：头部
+-->
+<header>
+    <a onclick="history.go(-1)">
+        <div class="back"></div>
+    </a>
+    好易创
+</header>
+
+
+<section class="car">
+    <div class="title">
+        购物车（<span class="tatal_num" style="font-size: 1.7rem;">0</span>）
+        <div class="edit">编辑</div>
+    </div>
+
+    <ul class="item_ul" id="shopCartBox">
+        <volist name="cart_list" id="vo">
+            <li>
+                <div class="left_img">
+                    <div class="check_img" data-id="{$vo.id}">
+                        <input name="" type="checkbox" id="{$vo.id}" cartlevel='2' class="check" style="display: none;">
+                    </div>
+                    <div class="img_box"><label for="{$vo.id}"><img
+                            src="{$vo.goods_img}"></label></div>
+                </div>
+                <div class="right_tex">
+                    <a href="{:U('Goods/detail',array('gid'=>$vo['id']))}"><h1 style="display: block; height: 1.5rem; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; line-height: 1.5rem;">{$vo.goods_name}</h1></a>
+                    <p>{$vo.goods_desc}</p>
+                    <div class="price">
+                        <span>￥</span><code style="float:none;" class="CartShopPrice">{$vo.goods_price}</code>
+                        <code>
+                            <button class="del bt_CartReduce">-</button>
+                            <input class="text Input_CartListNum" disabled type="text" value="{$vo.goods_num}"/>
+                            <button class="add bt_CartPlus">+</button>
+                        </code>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </li>
+        </volist>
+    </ul>
+
+    <div class="buy">总计（不含运费）：<code class="price"><span>￥</span><code id="TotalAmount">0.00</code></code>
+        <button id="cart_buy_submit">去结算（<span id="selectNum" style="font-size: 1.3rem;">0</span>）</button>
+    </div>
+
+    <div class="bt_bottom" style="display: none;">删除</div>
+</section>
+
+<div class="clear" style="height:6rem;"></div>
+
+<div class="footer">
+    <a href="{:U('Index/index')}" ><img src="__PUBLIC__/home/images/new_home.png" class="img1"><img src="__PUBLIC__/home/images/new_home_active.png" class="img2">
+        <h3>商城</h3></a>
+    <a href="{:U('Goods/categoryList')}"><img src="__PUBLIC__/home/images/new_cate.png" class="img1"><img src="__PUBLIC__/home/images/new_cate_active.png" class="img2">
+        <h3>分类</h3></a>
+    <a href="{:U('Cart/index')}" class="active"><img src="__PUBLIC__/home/images/new_cart.png" class="img1"><img src="__PUBLIC__/home/images/new_cart_active.png" class="img2">
+        <h3>购物车</h3></a>
+    <a href="{:U('User/index')}"><img src="__PUBLIC__/home/images/new_user.png" class="img1"><img src="__PUBLIC__/home/images/new_user_active.png" class="img2">
+        <h3>个人中心</h3></a>
+</div> 
+
+</body>
+<script src="__PUBLIC__/home/js/myAjax.js"></script>
+<script src="__PUBLIC__/home/js/shoppingcart.js"></script>
+<script>
+    $(function () {
+
+        $('.edit').click(function () {
+            var edit = $(this).attr('edit');
+            if (edit == 1) {
+                $(this).attr('edit', 0);
+                $(this).html('编辑');
+                $('.bt_bottom').hide();
+                $('.buy').show();
+            } else {
+                $(this).attr('edit', 1);
+                $(this).html('完成');
+                $('.bt_bottom').show();
+                $('.buy').hide();
+            }
+        });
+
+        var b = new $.shopCart({
+            shopCartBoxId: 'shopCartBox',//订单列表根目录ID
+            TotalAmountBoxId: 'TotalAmount',//用于存放计算总金额的ID
+        });
+
+        b.starShoppingCart();
+
+
+    })
+</script>
+</html>

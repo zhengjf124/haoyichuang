@@ -1,0 +1,152 @@
+<include file="Public:head"/>
+<script src="__PUBLIC__/jweixin-1.0.0.js"></script>
+<script>
+    /*
+     * 注意：
+     * 1. 所有的JS接口只能在公众号绑定的域名下调用，公众号开发者需要先登录微信公众平台进入"公众号设置"的"功能设置"里填写"JS接口安全域名"。
+     * 2. 如果发现在 Android 不能分享自定义内容，请到官网下载最新的包覆盖安装，Android 自定义分享接口需升级至 6.0.2.58 版本及以上。
+     * 3. 完整 JS-SDK 文档地址：http://mp.weixin.qq.com/wiki/7/aaa137b55fb2e0456bf8dd9148dd613f.html
+     *
+     * 如有问题请通过以下渠道反馈：
+     * 邮箱地址：weixin-open@qq.com
+     * 邮件主题：【微信JS-SDK反馈】具体问题
+     * 邮件内容说明：用简明的语言描述问题所在，并交代清楚遇到该问题的场景，可附上截屏图片，微信团队会尽快处理你的反馈。
+     */
+    wx.config({
+        debug: false,
+        appId: '{$config.appId}',
+        timestamp: '{$config.timestamp}',
+        nonceStr: '{$config.nonceStr}',
+        signature: '{$config.signature}',
+        jsApiList: [
+            'checkJsApi',
+            'onMenuShareTimeline',
+            'onMenuShareAppMessage',
+            'onMenuShareQQ',
+            'onMenuShareWeibo'
+        ]
+    });
+
+    var wxData = {
+        "appId": "",
+        "imgUrl": "{$shareinfo.img}",
+        "shared":  "",
+        "link":  "{$shareinfo.url}",
+
+        "desc": '{$shareinfo.desc}',
+        "title": '{$shareinfo.title}'
+    };
+
+    wx.ready(function () {
+        // 2. 分享接口
+        // 2.1 监听"分享给朋友"，按钮点击、自定义分享内容及分享结果接口
+        wx.onMenuShareAppMessage({
+            title: wxData.title,
+            desc: wxData.desc,
+            link: wxData.link,
+            imgUrl: wxData.imgUrl,
+            trigger: function (res) {
+            },
+            success: function (res) {
+                location.href = wxData.shared;
+            },
+            cancel: function (res) {
+            },
+            fail: function (res) {
+                //alert(JSON.stringify(res));
+            }
+        });
+
+        wx.onMenuShareTimeline({
+            title: wxData.title,
+            desc: wxData.desc,
+            link: wxData.link,
+            imgUrl: wxData.imgUrl,
+            trigger: function (res) {
+            },
+            success: function (res) {
+                location.href = wxData.shared;
+            },
+            cancel: function (res) {
+            },
+            fail: function (res) {
+                //alert(JSON.stringify(res));
+            }
+        });
+    });
+
+    wx.error(function (res) {
+        //alert(res.errMsg);
+        //alert('nnnnnnnnnnnnnnno');
+    });
+</script>
+<body>
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-27
+    描述：头部
+-->
+<header>
+    <a onclick="history.go(-1)">
+        <div class="back" ></div>
+    </a>
+    好易创
+</header>
+
+<div class="clear" style="height:1rem;"></div>
+
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-27
+    描述：焦点图片
+-->
+<section class="banner">
+    <div class="slider">
+        <ul>
+            <volist name="info.goods_imgs" id="img">
+                <li><a><img src="{$img.image_url}"></a></li>
+            </volist>
+        </ul>
+    </div>
+</section>
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-28
+    描述：商品信息
+-->
+<section class="pr_details">
+    <h1>{$info.goods_name}</h1>
+    <h2>运费：￥0.00<span><code>￥</code>{$info.goods_price}</span></h2>
+</section>
+
+<section class="pr_cont">
+    {$info.goods_desc}
+</section>
+
+
+<div class="clear" style="height:6rem;"></div>
+
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-28
+    描述：购买按钮等
+-->
+<menu class="buy_box">
+    <input type="hidden" id="goods_id" value="{$info.id}">
+    <a style="cursor:pointer;" id="add_cart_submit">
+        <li>加入购物车</li>
+    </a>
+    <a style="cursor:pointer;" id="buy_now_submit">
+        <li>立即购买</li>
+    </a>
+</menu>
+
+</body>
+<script type="text/javascript" src="__PUBLIC__/home/js/yxMobileSlider.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/myAjax.js"></script>
+<script>
+    var bannerWidth = $('.banner').width();
+    var bannerHeight = $('.banner').height();
+    $(".slider").yxMobileSlider({width: bannerWidth, height: bannerHeight, during: 3000});
+</script>
+</html>

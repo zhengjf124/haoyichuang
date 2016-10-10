@@ -1,0 +1,2097 @@
+[ 2016-10-09T16:59:42+08:00 ] 59.56.44.58 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=21&field=is_recommend&value=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000579s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0015s ]
+SQL: UPDATE `gwshop_goods` SET `is_recommend`='0' WHERE ( id = 21 ) [ RunTime:0.0066s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000629s ]
+
+[ 2016-10-09T16:59:47+08:00 ] 59.56.44.58 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=21&field=is_recommend&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000537s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0009s ]
+SQL: UPDATE `gwshop_goods` SET `is_recommend`='1' WHERE ( id = 21 ) [ RunTime:0.0045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000666s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000722s ]
+
+[ 2016-10-09T17:00:40+08:00 ] 59.56.34.115 /index.php/Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0008s ]
+SQL: SELECT `id`,`type_name`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0006s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/a2e732524f2603a7bb93db679b72ec2f.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010883s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010938s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000153s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000415s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-10-09T17:00:40+08:00 ] 59.56.34.115 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000613s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000679s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000082s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008334s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000162s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000544s ]
+
+[ 2016-10-09T17:02:17+08:00 ] 59.56.34.115 /index.php/Admin/System/cleanCache.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000077s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000454s ]
+NOTIC: [2] scandir() has been disabled for security reasons /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 259 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000122s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004311s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004365s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000240s ]
+
+[ 2016-10-09T17:02:19+08:00 ] 59.56.34.115 /index.php/Admin/System/cleanCache.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000615s ]
+NOTIC: [2] scandir() has been disabled for security reasons /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 259 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000139s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004385s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004433s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000185s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000232s ]
+
+[ 2016-10-09T17:02:22+08:00 ] 59.56.34.115 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0010s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476000142 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476000142 )
+
+[ 2016-10-09T17:02:22+08:00 ] 59.56.34.115 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000063s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008120s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008206s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000233s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000557s ]
+
+[ 2016-10-09T17:13:05+08:00 ] 59.56.34.115 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000384s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `gwshop_system_module` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_system_module` WHERE ( level>1 AND visible=1 ) ORDER BY mod_id ASC  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000179s ]
+NOTIC: [8] Undefined variable: upgradeMsg /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 50 行.
+NOTIC: [8] Undefined variable: upgradeMsg /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 53 行.
+NOTIC: [8] Undefined variable: order_amount /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010513s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010555s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000480s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000532s ]
+
+[ 2016-10-09T17:13:05+08:00 ] 59.56.34.115 /index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+NOTIC: [2] file_get_contents(./Application/Admin/Conf/version.txt): failed to open stream: No such file or directory /home/wwwroot/txdemo/Shop/Application/Admin/Controller/IndexController.class.php 第 52 行.
+SQL: SELECT VERSION() as version [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: version /home/wwwroot/txdemo/Shop/Application/Admin/Controller/IndexController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `gwshop_order` [ RunTime:0.0016s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475917985  ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475917985 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_article` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_article` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( last_login>1475917985 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( reg_time>1475917985 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_comments` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000085s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/dde7b494b6eaf8d1ebea54f5b28ad048.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008537s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008586s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000481s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000524s ]
+
+[ 2016-10-09T17:13:05+08:00 ] 59.56.34.115 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000062s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0009s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476000785 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476000785 )
+
+[ 2016-10-09T17:13:09+08:00 ] 59.56.34.115 /index.php/Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000568s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000681s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0009s ]
+SQL: SELECT `id`,`type_name`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0006s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000218s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/a2e732524f2603a7bb93db679b72ec2f.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010899s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010987s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000254s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+
+[ 2016-10-09T17:13:09+08:00 ] 59.56.34.115 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000062s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000284s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000589s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000652s ]
+
+[ 2016-10-09T17:18:48+08:00 ] 59.56.34.115 /index.php/Admin/goods/addEditGoods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000455s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0008s ]
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 137 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 138 行.
+NOTIC: [8] Undefined index: is_ajax /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 0 )  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_type` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_goods_type`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_goods` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_goods_images` WHERE ( goods_id =0 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000223s ]
+NOTIC: [8] Undefined variable: URL_home /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 84 行.
+NOTIC: [8] Use of undefined constant is_promote - assumed 'is_promote' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 153 行.
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 160 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 283 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 361 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 362 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 368 行.
+NOTIC: [8] Use of undefined constant basic_default_storage - assumed 'basic_default_storage' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 370 行.
+NOTIC: [8] Undefined variable: tpshop_config /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 370 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 604 行.
+NOTIC: [8] Undefined offset: 3 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 606 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 610 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 612 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018416s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018457s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000244s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000540s ]
+
+[ 2016-10-09T17:18:48+08:00 ] 59.56.34.115 /index.php/admin/Goods/ajaxGetSpecSelect.html?goods_id=&spec_type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000068s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000575s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000659s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `gwshop_spec` WHERE ( type_id = 0 ) ORDER BY `order` desc  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0010s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') AS items_id FROM `gwshop_spec_goods_price` WHERE ( goods_id = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: specImageList /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 291 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008588s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008652s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000191s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000224s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-10-09T17:18:48+08:00 ] 59.56.34.115 /index.php/admin/Goods/ajaxGetSpecInput/goods_id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000401s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 303 行.
+NOTIC: [8] Undefined index: spec_arr /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 304 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 304 行.
+NOTIC: [2] asort() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 308 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 309 行.
+NOTIC: [8] Undefined variable: spec_arr2 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 315 行.
+NOTIC: [2] array_keys() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 315 行.
+NOTIC: [8] Undefined variable: spec_arr2 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 316 行.
+NOTIC: [2] array_shift() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 301 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 302 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 307 行.
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name` FROM `gwshop_spec`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_item` [ RunTime:0.0004s ]
+SQL: SELECT `id`,`item`,`spec_id` FROM `gwshop_spec_item`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0005s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`bar_code` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 0 )  [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 325 行.
+
+[ 2016-10-09T17:21:48+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Uploadify&a=upload&num=1&input=&path=goods&func=call_back
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000117s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000424s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005788s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005834s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000181s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000220s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000530s ]
+
+[ 2016-10-09T17:21:53+08:00 ] 59.56.34.115 /index.php/Admin/Ueditor/imageUp/savepath/goods/pictitle/banner/dir/images.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] Undefined index: pictitle /home/wwwroot/txdemo/Shop/Application/Admin/Controller/UeditorController.class.php 第 270 行.
+NOTIC: [8] Undefined index: dir /home/wwwroot/txdemo/Shop/Application/Admin/Controller/UeditorController.class.php 第 271 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /home/wwwroot/txdemo/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-10-09T17:22:06+08:00 ] 59.56.34.115 /index.php/Admin/Ueditor/imageUp/savepath/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /home/wwwroot/txdemo/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-10-09T17:22:15+08:00 ] 59.56.34.115 /index.php/Admin/Goods/addEditGoods/is_ajax/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: validate /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `gwshop_goods` (`goods_name`,`goods_brief`,`goods_sn`,`cat_id`,`goods_price`,`market_price`,`second_distribution_price`,`third_distribution_price`,`original_img`,`store_count`,`is_on_sale`,`is_recommend`,`is_new`,`is_hot`,`gtype`,`goods_desc`,`spec_type`,`goods_type`,`id`) VALUES ('塔科玛润滑油：全合成汽油机油 SN 10W-40','','SN  10W-40','31','','','','','/Public/upload/goods/2016/10-09/57fa0c3114c9a.png','0','0','0','0','0','0','&lt;p&gt;&lt;img src=&quot;/Public/upload/goods/2016/10-09/57fa0c3eee33d.jpg&quot; title=&quot;3.jpg&quot;/&gt;&lt;/p&gt;','0','0','0') [ RunTime:0.0043s ]
+NOTIC: [8] Undefined index: item /home/wwwroot/txdemo/Shop/Application/Admin/Model/GoodsModel.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_spec_goods_price` WHERE ( goods_id = 22 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-10-09T17:22:16+08:00 ] 59.56.34.115 /index.php/Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000598s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000712s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`type_name`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0006s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/a2e732524f2603a7bb93db679b72ec2f.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012099s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2016-10-09T17:22:17+08:00 ] 59.56.34.115 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000537s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000610s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 0,10   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000154s ]
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010241s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000187s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000216s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000494s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000549s ]
+
+[ 2016-10-09T17:22:19+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=22&field=is_on_sale&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000428s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0011s ]
+SQL: UPDATE `gwshop_goods` SET `is_on_sale`='1' WHERE ( id = 22 ) [ RunTime:0.0043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000690s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000758s ]
+
+[ 2016-10-09T17:22:20+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=22&field=is_recommend&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000086s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000604s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: UPDATE `gwshop_goods` SET `is_recommend`='1' WHERE ( id = 22 ) [ RunTime:0.0045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000619s ]
+
+[ 2016-10-09T17:22:21+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=22&field=is_new&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0009s ]
+SQL: UPDATE `gwshop_goods` SET `is_new`='1' WHERE ( id = 22 ) [ RunTime:0.0045s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000706s ]
+
+[ 2016-10-09T17:22:22+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=22&field=is_hot&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0013s ]
+SQL: UPDATE `gwshop_goods` SET `is_hot`='1' WHERE ( id = 22 ) [ RunTime:0.0040s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000607s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000648s ]
+
+[ 2016-10-09T17:22:24+08:00 ] 59.56.34.115 /admin/Goods/updateField
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0009s ]
+SQL: UPDATE `gwshop_goods` SET `store_count`='1000' WHERE `id` = 22 [ RunTime:0.0069s ]
+
+[ 2016-10-09T17:22:25+08:00 ] 59.56.34.115 /index.php/Admin/Goods/addEditGoods/id/22.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000094s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 137 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 138 行.
+NOTIC: [8] Undefined index: is_ajax /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_type` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_goods_type`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_goods` WHERE ( id=22 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 416 行.
+NOTIC: [8] Undefined index:  /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 422 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_goods_images` WHERE ( goods_id =22 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000200s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+NOTIC: [8] Undefined variable: URL_home /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 84 行.
+NOTIC: [8] Use of undefined constant is_promote - assumed 'is_promote' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 153 行.
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 160 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 283 行.
+NOTIC: [8] Undefined index: cost_price /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 327 行.
+NOTIC: [8] Undefined index: commission /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 334 行.
+NOTIC: [8] Undefined index: weight /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 353 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 361 行.
+NOTIC: [8] Undefined index: is_free_shipping /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 361 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 362 行.
+NOTIC: [8] Undefined index: is_free_shipping /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 362 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 368 行.
+NOTIC: [8] Undefined index: give_integral /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 378 行.
+NOTIC: [8] Undefined index: is_free_shipping /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 390 行.
+NOTIC: [8] Undefined index: keywords /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 406 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 604 行.
+NOTIC: [8] Undefined offset: 3 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 606 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 610 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 612 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000674s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000744s ]
+
+[ 2016-10-09T17:22:26+08:00 ] 59.56.34.115 /index.php/admin/Goods/ajaxGetSpecSelect.html?goods_id=22&spec_type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0015s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `gwshop_spec` WHERE ( type_id = 0 ) ORDER BY `order` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0005s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') AS items_id FROM `gwshop_spec_goods_price` WHERE ( goods_id = 22 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_image` [ RunTime:0.0005s ]
+SQL: SELECT `spec_image_id`,`src` FROM `gwshop_spec_image` WHERE ( goods_id = 22 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008060s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008121s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000551s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000592s ]
+
+[ 2016-10-09T17:22:26+08:00 ] 59.56.34.115 /index.php/admin/Goods/ajaxGetSpecInput/goods_id/22
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: spec_arr /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 304 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 304 行.
+NOTIC: [2] asort() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 308 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 309 行.
+NOTIC: [8] Undefined variable: spec_arr2 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 315 行.
+NOTIC: [2] array_keys() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 315 行.
+NOTIC: [8] Undefined variable: spec_arr2 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 316 行.
+NOTIC: [2] array_shift() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 301 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 302 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 307 行.
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name` FROM `gwshop_spec`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_item` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`item`,`spec_id` FROM `gwshop_spec_item`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0007s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`bar_code` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 22 )  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 325 行.
+
+[ 2016-10-09T17:22:28+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Uploadify&a=upload&num=10&input=&path=goods&func=call_back2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000360s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000415s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000089s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004831s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004872s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000154s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000185s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2016-10-09T17:22:35+08:00 ] 59.56.34.115 /index.php/Admin/Ueditor/imageUp/savepath/goods/pictitle/banner/dir/images.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000081s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000391s ]
+NOTIC: [8] Undefined index: pictitle /home/wwwroot/txdemo/Shop/Application/Admin/Controller/UeditorController.class.php 第 270 行.
+NOTIC: [8] Undefined index: dir /home/wwwroot/txdemo/Shop/Application/Admin/Controller/UeditorController.class.php 第 271 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /home/wwwroot/txdemo/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-10-09T17:22:38+08:00 ] 59.56.34.115 /index.php/Admin/Goods/addEditGoods/is_ajax/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000097s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000652s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000722s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0012s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: validate /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: UPDATE `gwshop_goods` SET `goods_name`='塔科玛润滑油：全合成汽油机油 SN 10W-40',`goods_brief`='',`goods_sn`='SN  10W-40',`cat_id`='31',`goods_price`='0.00',`market_price`='0.00',`second_distribution_price`='0',`third_distribution_price`='0',`original_img`='/Public/upload/goods/2016/10-09/57fa0c3114c9a.png',`store_count`='1000',`is_on_sale`='1',`is_recommend`='1',`is_new`='1',`is_hot`='1',`gtype`='0',`goods_desc`='&lt;p&gt;&lt;img src=&quot;/Public/upload/goods/2016/10-09/57fa0c3eee33d.jpg&quot; title=&quot;3.jpg&quot;/&gt;&lt;/p&gt;',`spec_type`='0',`goods_type`='0',`add_time`='1476004958',`goods_img`='/Public/upload/goods/2016/10-09/57fa0c3114c9a.png' WHERE `id` = 22 [ RunTime:0.0057s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0007s ]
+SQL: SELECT `img_id`,`image_url` FROM `gwshop_goods_images` WHERE ( goods_id = 22 )  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Model/GoodsModel.class.php 第 27 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Model/GoodsModel.class.php 第 39 行.
+SQL: INSERT INTO `gwshop_goods_images` (`goods_id`,`image_url`) VALUES ('22','/Public/upload/goods/2016/10-09/57fa0c5b61c11.png') [ RunTime:0.0037s ]
+NOTIC: [8] Undefined index: item /home/wwwroot/txdemo/Shop/Application/Admin/Model/GoodsModel.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_spec_goods_price` WHERE ( goods_id = 22 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-10-09T17:22:40+08:00 ] 59.56.34.115 /index.php/Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`type_name`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0006s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000070s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/a2e732524f2603a7bb93db679b72ec2f.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008431s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008479s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000570s ]
+
+[ 2016-10-09T17:22:40+08:00 ] 59.56.34.115 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0012s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000164s ]
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009068s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000190s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000368s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000410s ]
+
+[ 2016-10-09T17:25:22+08:00 ] 59.56.34.115 /index.php/Admin/goods/addEditGoods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0023s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 137 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 138 行.
+NOTIC: [8] Undefined index: is_ajax /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 0 )  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_type` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_goods_type`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_goods` WHERE ( id=0 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_goods_images` WHERE ( goods_id =0 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined variable: URL_home /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 84 行.
+NOTIC: [8] Use of undefined constant is_promote - assumed 'is_promote' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 153 行.
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 160 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined offset: 1 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 222 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 283 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 361 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 362 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 368 行.
+NOTIC: [8] Use of undefined constant basic_default_storage - assumed 'basic_default_storage' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 370 行.
+NOTIC: [8] Undefined variable: tpshop_config /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 370 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 604 行.
+NOTIC: [8] Undefined offset: 3 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 606 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 610 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 612 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018442s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018499s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000160s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000200s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000558s ]
+
+[ 2016-10-09T17:25:23+08:00 ] 59.56.34.115 /index.php/admin/Goods/ajaxGetSpecSelect.html?goods_id=&spec_type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000108s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000422s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_spec` WHERE ( type_id = 0 ) ORDER BY `order` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0007s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') AS items_id FROM `gwshop_spec_goods_price` WHERE ( goods_id = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: specImageList /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 291 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000100s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006550s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006600s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000243s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000513s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2016-10-09T17:25:23+08:00 ] 59.56.34.115 /index.php/admin/Goods/ajaxGetSpecInput/goods_id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000100s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000649s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 303 行.
+NOTIC: [8] Undefined index: spec_arr /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 304 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 304 行.
+NOTIC: [2] asort() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 308 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 309 行.
+NOTIC: [8] Undefined variable: spec_arr2 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 315 行.
+NOTIC: [2] array_keys() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 315 行.
+NOTIC: [8] Undefined variable: spec_arr2 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 316 行.
+NOTIC: [2] array_shift() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 301 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 302 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 307 行.
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`name` FROM `gwshop_spec`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_item` [ RunTime:0.0005s ]
+SQL: SELECT `id`,`item`,`spec_id` FROM `gwshop_spec_item`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0005s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`bar_code` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 0 )  [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 325 行.
+
+[ 2016-10-09T17:25:59+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Uploadify&a=upload&num=1&input=&path=goods&func=call_back
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000110s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000616s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000702s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000165s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008707s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000236s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000633s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000692s ]
+
+[ 2016-10-09T17:26:04+08:00 ] 59.56.34.115 /index.php/Admin/Ueditor/imageUp/savepath/goods/pictitle/banner/dir/images.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000581s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+NOTIC: [8] Undefined index: pictitle /home/wwwroot/txdemo/Shop/Application/Admin/Controller/UeditorController.class.php 第 270 行.
+NOTIC: [8] Undefined index: dir /home/wwwroot/txdemo/Shop/Application/Admin/Controller/UeditorController.class.php 第 271 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /home/wwwroot/txdemo/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-10-09T17:26:19+08:00 ] 59.56.34.115 /index.php/Admin/Ueditor/imageUp/savepath/goods.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000105s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /home/wwwroot/txdemo/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-10-09T17:26:24+08:00 ] 59.56.34.115 /index.php/Admin/Goods/addEditGoods/is_ajax/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000082s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000583s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: validate /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: INSERT INTO `gwshop_goods` (`goods_name`,`goods_brief`,`goods_sn`,`cat_id`,`goods_price`,`market_price`,`second_distribution_price`,`third_distribution_price`,`original_img`,`store_count`,`is_on_sale`,`is_recommend`,`is_new`,`is_hot`,`gtype`,`goods_desc`,`spec_type`,`goods_type`,`id`) VALUES ('塔科玛润滑油：全合成汽油机油 SL  15W--50','','SL   15W---50','31','','','','','/Public/upload/goods/2016/10-09/57fa0d2c88a0c.png','0','0','0','0','0','0','&lt;p&gt;&lt;img src=&quot;/Public/upload/goods/2016/10-09/57fa0d3b3fd0b.png&quot; title=&quot;4.png&quot;/&gt;&lt;/p&gt;','0','0','0') [ RunTime:0.0053s ]
+NOTIC: [8] Undefined index: item /home/wwwroot/txdemo/Shop/Application/Admin/Model/GoodsModel.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_spec_goods_price` WHERE ( goods_id = 23 ) LIMIT 1   [ RunTime:0.0003s ]
+
+[ 2016-10-09T17:26:25+08:00 ] 59.56.34.115 /index.php/Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000377s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000429s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0011s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`type_name`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0006s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000147s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/a2e732524f2603a7bb93db679b72ec2f.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009239s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009282s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000501s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000546s ]
+
+[ 2016-10-09T17:26:26+08:00 ] 59.56.34.115 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000407s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0015s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 0,10   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000206s ]
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017976s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018040s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000736s ]
+
+[ 2016-10-09T17:26:29+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=23&field=is_on_sale&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000060s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000412s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0009s ]
+SQL: UPDATE `gwshop_goods` SET `is_on_sale`='1' WHERE ( id = 23 ) [ RunTime:0.0053s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000715s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2016-10-09T17:26:29+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=23&field=is_recommend&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000067s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000395s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000438s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: UPDATE `gwshop_goods` SET `is_recommend`='1' WHERE ( id = 23 ) [ RunTime:0.1014s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000957s ]
+
+[ 2016-10-09T17:26:30+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=23&field=is_new&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000557s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000619s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0016s ]
+SQL: UPDATE `gwshop_goods` SET `is_new`='1' WHERE ( id = 23 ) [ RunTime:0.0044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000735s ]
+
+[ 2016-10-09T17:26:30+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=23&field=is_hot&value=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000074s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0014s ]
+SQL: UPDATE `gwshop_goods` SET `is_hot`='1' WHERE ( id = 23 ) [ RunTime:0.0056s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001185s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001252s ]
+
+[ 2016-10-09T17:26:33+08:00 ] 59.56.34.115 /admin/Goods/updateField
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000069s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000577s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000651s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0013s ]
+SQL: UPDATE `gwshop_goods` SET `store_count`='1000' WHERE `id` = 23 [ RunTime:0.0049s ]
+
+[ 2016-10-09T17:26:35+08:00 ] 59.56.34.115 /index.php/Admin/Goods/addEditGoods/id/23.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000093s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0013s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 137 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 138 行.
+NOTIC: [8] Undefined index: is_ajax /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 140 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_goods_category` WHERE ( parent_id = 0 )  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_type` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_goods_type`  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `gwshop_goods` WHERE ( id=23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 0 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 416 行.
+NOTIC: [8] Undefined index:  /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 422 行.
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_goods_images` WHERE ( goods_id =23 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000229s ]
+NOTIC: [8] Undefined variable: URL_home /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 84 行.
+NOTIC: [8] Use of undefined constant is_promote - assumed 'is_promote' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 153 行.
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 160 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 246 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 247 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined index: name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 272 行.
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 283 行.
+NOTIC: [8] Undefined index: cost_price /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 327 行.
+NOTIC: [8] Undefined index: commission /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 334 行.
+NOTIC: [8] Undefined index: weight /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 353 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 361 行.
+NOTIC: [8] Undefined index: is_free_shipping /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 361 行.
+NOTIC: [8] Use of undefined constant is_free_shipping - assumed 'is_free_shipping' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 362 行.
+NOTIC: [8] Undefined index: is_free_shipping /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 362 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 368 行.
+NOTIC: [8] Undefined index: give_integral /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 378 行.
+NOTIC: [8] Undefined index: is_free_shipping /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 390 行.
+NOTIC: [8] Undefined index: keywords /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 406 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant spec_type - assumed 'spec_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 456 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant goods_type - assumed 'goods_type' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 474 行.
+NOTIC: [8] Undefined offset: 2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 604 行.
+NOTIC: [8] Undefined offset: 3 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 606 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 610 行.
+NOTIC: [8] Undefined variable: level_cat2 /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/75aa47e1e679240b72b6e20fb71d1d3b.php 第 612 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022126s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022200s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000252s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2016-10-09T17:26:35+08:00 ] 59.56.34.115 /index.php/admin/Goods/ajaxGetSpecSelect.html?goods_id=23&spec_type=0
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000409s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0014s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_spec` WHERE ( type_id = 0 ) ORDER BY `order` desc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0006s ]
+SQL: SELECT GROUP_CONCAT(`key` SEPARATOR '_') AS items_id FROM `gwshop_spec_goods_price` WHERE ( goods_id = 23 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_image` [ RunTime:0.0005s ]
+SQL: SELECT `spec_image_id`,`src` FROM `gwshop_spec_image` WHERE ( goods_id = 23 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000088s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006890s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006931s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.003044s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.003105s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000410s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000446s ]
+
+[ 2016-10-09T17:26:35+08:00 ] 59.56.34.115 /index.php/admin/Goods/ajaxGetSpecInput/goods_id/23
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000528s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0011s ]
+NOTIC: [8] Undefined index: spec_arr /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 304 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 304 行.
+NOTIC: [2] asort() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 308 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 309 行.
+NOTIC: [8] Undefined variable: spec_arr2 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 315 行.
+NOTIC: [2] array_keys() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 315 行.
+NOTIC: [8] Undefined variable: spec_arr2 /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 316 行.
+NOTIC: [2] array_shift() expects parameter 1 to be array, null given /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 301 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 302 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 307 行.
+SQL: SHOW COLUMNS FROM `gwshop_spec` [ RunTime:0.0007s ]
+SQL: SELECT `id`,`name` FROM `gwshop_spec`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_item` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`item`,`spec_id` FROM `gwshop_spec_item`  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0006s ]
+SQL: SELECT `key`,`key_name`,`price`,`store_count`,`bar_code` FROM `gwshop_spec_goods_price` WHERE ( goods_id = 23 )  [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Logic/GoodsLogic.class.php 第 325 行.
+
+[ 2016-10-09T17:26:37+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Uploadify&a=upload&num=10&input=&path=goods&func=call_back2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000116s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000542s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008170s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008228s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000217s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000637s ]
+
+[ 2016-10-09T17:26:44+08:00 ] 59.56.34.115 /index.php/Admin/Ueditor/imageUp/savepath/goods/pictitle/banner/dir/images.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000083s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+NOTIC: [8] Undefined index: pictitle /home/wwwroot/txdemo/Shop/Application/Admin/Controller/UeditorController.class.php 第 270 行.
+NOTIC: [8] Undefined index: dir /home/wwwroot/txdemo/Shop/Application/Admin/Controller/UeditorController.class.php 第 271 行.
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given /home/wwwroot/txdemo/ThinkPHP/Library/Think/Upload.class.php 第 170 行.
+
+[ 2016-10-09T17:26:48+08:00 ] 59.56.34.115 /index.php/Admin/Goods/addEditGoods/is_ajax/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0007s ]
+NOTIC: [8] Undefined index: validate /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+NOTIC: [8] Undefined index: validate /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1185 行.
+NOTIC: [8] Undefined index: auto /home/wwwroot/txdemo/ThinkPHP/Library/Think/Model.class.php 第 1128 行.
+SQL: UPDATE `gwshop_goods` SET `goods_name`='塔科玛润滑油：全合成汽油机油 SL  15W--50',`goods_brief`='',`goods_sn`='SL   15W---50',`cat_id`='31',`goods_price`='0.00',`market_price`='0.00',`second_distribution_price`='0',`third_distribution_price`='0',`original_img`='/Public/upload/goods/2016/10-09/57fa0d2c88a0c.png',`store_count`='1000',`is_on_sale`='1',`is_recommend`='1',`is_new`='1',`is_hot`='1',`gtype`='0',`goods_desc`='&lt;p&gt;&lt;img src=&quot;/Public/upload/goods/2016/10-09/57fa0d3b3fd0b.png&quot; title=&quot;4.png&quot;/&gt;&lt;/p&gt;',`spec_type`='0',`goods_type`='0',`add_time`='1476005208',`goods_img`='/Public/upload/goods/2016/10-09/57fa0d2c88a0c.png' WHERE `id` = 23 [ RunTime:0.0042s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_images` [ RunTime:0.0007s ]
+SQL: SELECT `img_id`,`image_url` FROM `gwshop_goods_images` WHERE ( goods_id = 23 )  [ RunTime:0.0004s ]
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Admin/Model/GoodsModel.class.php 第 27 行.
+NOTIC: [2] in_array() expects parameter 2 to be array, null given /home/wwwroot/txdemo/Shop/Application/Admin/Model/GoodsModel.class.php 第 39 行.
+SQL: INSERT INTO `gwshop_goods_images` (`goods_id`,`image_url`) VALUES ('23','/Public/upload/goods/2016/10-09/57fa0d54f16bb.png') [ RunTime:0.0035s ]
+NOTIC: [8] Undefined index: item /home/wwwroot/txdemo/Shop/Application/Admin/Model/GoodsModel.class.php 第 50 行.
+SQL: SHOW COLUMNS FROM `gwshop_spec_goods_price` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_spec_goods_price` WHERE ( goods_id = 23 ) LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2016-10-09T17:26:49+08:00 ] 59.56.34.115 /index.php/Admin/Goods/goodsList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000066s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000418s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0009s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0006s ]
+SQL: SELECT `id`,`type_name`,`parent_id`,`level` FROM `gwshop_goods_category`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: brandList /home/wwwroot/txdemo/Shop/Application/Admin/Controller/GoodsController.class.php 第 109 行.
+SQL: SHOW COLUMNS FROM `gwshop_active` [ RunTime:0.0004s ]
+SQL: SELECT `end_time` FROM `gwshop_active` WHERE `type` = 'limit_goods' LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000089s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000244s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/a2e732524f2603a7bb93db679b72ec2f.php 第 70 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007824s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007866s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000158s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000448s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000487s ]
+
+[ 2016-10-09T17:26:50+08:00 ] 59.56.34.115 /index.php?m=Admin&c=goods&a=ajaxGoodsList&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000114s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000373s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `id`,`goods_name`,`cat_id`,`goods_sn`,`goods_price`,`sort_order`,`store_count`,`is_recommend`,`is_hot`,`is_new`,`is_on_sale`,`gtype` FROM `gwshop_goods` WHERE (  1 = 1  and gtype=0 ) LIMIT 0,10   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `gwshop_goods_category`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000087s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000143s ]
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+NOTIC: [8] Use of undefined constant cat_id - assumed 'cat_id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant type_name - assumed 'type_name' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 59 行.
+NOTIC: [8] Use of undefined constant is_on_sale - assumed 'is_on_sale' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 65 行.
+NOTIC: [8] Use of undefined constant is_recommend - assumed 'is_recommend' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 68 行.
+NOTIC: [8] Use of undefined constant is_new - assumed 'is_new' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 71 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 74 行.
+NOTIC: [8] Undefined index: goods_id /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 84 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/1586526826de2b5636da12486178d9f7.php 第 86 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009262s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000210s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000392s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000428s ]
+
+[ 2016-10-09T17:26:55+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=22&field=sort_order&value=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0011s ]
+SQL: UPDATE `gwshop_goods` SET `sort_order`='3' WHERE ( id = 22 ) [ RunTime:0.0043s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000708s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000766s ]
+
+[ 2016-10-09T17:26:57+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Index&a=changeTableVal&table=goods&id_name=id&id_value=23&field=sort_order&value=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000353s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000392s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0013s ]
+SQL: UPDATE `gwshop_goods` SET `sort_order`='4' WHERE ( id = 23 ) [ RunTime:0.0044s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000720s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000800s ]
+
+[ 2016-10-09T17:26:58+08:00 ] 59.56.34.115 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000099s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `gwshop_system_module` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `gwshop_system_module` WHERE ( level>1 AND visible=1 ) ORDER BY mod_id ASC  [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000100s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+NOTIC: [8] Undefined variable: upgradeMsg /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 50 行.
+NOTIC: [8] Undefined variable: upgradeMsg /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 53 行.
+NOTIC: [8] Undefined variable: order_amount /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014190s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014265s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000259s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000326s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000635s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-10-09T17:26:59+08:00 ] 59.56.34.115 /index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000078s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000720s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000862s ]
+NOTIC: [2] file_get_contents(./Application/Admin/Conf/version.txt): failed to open stream: No such file or directory /home/wwwroot/txdemo/Shop/Application/Admin/Controller/IndexController.class.php 第 52 行.
+SQL: SELECT VERSION() as version [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: version /home/wwwroot/txdemo/Shop/Application/Admin/Controller/IndexController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `gwshop_order` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475918819  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475918819 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_article` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_article` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( last_login>1475918819 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( reg_time>1475918819 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_comments` [ RunTime:0.0008s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000090s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/dde7b494b6eaf8d1ebea54f5b28ad048.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011761s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000231s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-10-09T17:26:59+08:00 ] 59.56.34.115 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000042s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000103s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0013s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476001619 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476001619 )
+
+[ 2016-10-09T17:27:03+08:00 ] 59.56.34.115 /index.php/Admin/System/cleanCache.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000071s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000524s ]
+NOTIC: [2] scandir() has been disabled for security reasons /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 259 行.
+NOTIC: [2] Invalid argument supplied for foreach() /home/wwwroot/txdemo/Shop/Application/Common/Common/function.php 第 261 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000047s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005751s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005847s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000186s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000222s ]
+
+[ 2016-10-09T17:27:04+08:00 ] 59.56.34.115 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000621s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0010s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476001624 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476001624 )
+
+[ 2016-10-09T17:27:41+08:00 ] 59.56.34.115 /index.php/Admin/Login/logout.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+
+[ 2016-10-09T17:27:41+08:00 ] 59.56.34.115 /index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000073s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000114s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000217s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008638s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000235s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2016-10-09T17:27:41+08:00 ] 59.56.34.115 /index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000070s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000586s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000499s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000554s ]
+
+[ 2016-10-09T17:55:43+08:00 ] 59.56.44.58 /index.php/Admin/Wechat/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000122s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000413s ]
+
+[ 2016-10-09T17:55:43+08:00 ] 59.56.44.58 /index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000381s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006414s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006472s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000224s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000542s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000595s ]
+
+[ 2016-10-09T17:55:43+08:00 ] 59.56.44.58 /index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000582s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000578s ]
+
+[ 2016-10-09T17:55:52+08:00 ] 59.56.44.58 /index.php?m=Admin&c=Login&a=login&t=0.7103114519268274
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000075s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+
+[ 2016-10-09T17:55:53+08:00 ] 59.56.44.58 /index.php?m=Admin&c=Login&a=verify&r=81
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000349s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000492s ]
+
+[ 2016-10-09T17:55:55+08:00 ] 59.56.44.58 /index.php?m=Admin&c=Login&a=login&t=0.6909835354890674
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000528s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0006s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1476006955','1','后台登录','59.56.44.58','/index.php/Admin/Login/login') [ RunTime:0.0051s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0009s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1476006955',`last_ip`='59' WHERE `id` = 1 [ RunTime:0.0044s ]
+
+[ 2016-10-09T17:55:55+08:00 ] 59.56.44.58 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000059s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000389s ]
+SQL: SHOW COLUMNS FROM `gwshop_system_module` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_system_module` WHERE ( level>1 AND visible=1 ) ORDER BY mod_id ASC  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000092s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+NOTIC: [8] Undefined variable: upgradeMsg /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 50 行.
+NOTIC: [8] Undefined variable: upgradeMsg /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 53 行.
+NOTIC: [8] Undefined variable: order_amount /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009236s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009272s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000180s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000211s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000460s ]
+
+[ 2016-10-09T17:55:56+08:00 ] 59.56.44.58 /index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000533s ]
+NOTIC: [2] file_get_contents(./Application/Admin/Conf/version.txt): failed to open stream: No such file or directory /home/wwwroot/txdemo/Shop/Application/Admin/Controller/IndexController.class.php 第 52 行.
+SQL: SELECT VERSION() as version [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: version /home/wwwroot/txdemo/Shop/Application/Admin/Controller/IndexController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `gwshop_order` [ RunTime:0.0011s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475920556  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475920556 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_article` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_article` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( last_login>1475920556 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( reg_time>1475920556 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_comments` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/dde7b494b6eaf8d1ebea54f5b28ad048.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007374s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007423s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000166s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000198s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000433s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000486s ]
+
+[ 2016-10-09T17:55:56+08:00 ] 59.56.44.58 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000080s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000555s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000611s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0007s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476003356 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1476003356 )
+
+[ 2016-10-09T17:55:58+08:00 ] 59.56.44.58 /index.php/Admin/Wechat/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000095s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000578s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000657s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `gwshop_wx_user`  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/8d290800e6284f8e2b06873a2b52d26a.php 第 68 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/8d290800e6284f8e2b06873a2b52d26a.php 第 114 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011012s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011066s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000209s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000557s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000610s ]
+
+[ 2016-10-09T17:55:59+08:00 ] 59.56.44.58 /index.php/Admin/Wechat/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000120s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000633s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000745s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `gwshop_wx_user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW TABLE STATUS WHERE NAME = 'gwshop_wx_menu' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_menu` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` = 0 ORDER BY id ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` > 0 ORDER BY id ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000154s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/c67ddeb914f7d39129bf9f2ad9a16c87.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019707s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019777s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000644s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000707s ]
+
+[ 2016-10-09T17:56:08+08:00 ] 59.56.44.58 /index.php/Admin/Wechat/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `gwshop_wx_user` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_menu` [ RunTime:0.0007s ]
+SQL: SELECT `id` FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152'  [ RunTime:0.0003s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='商城',`type`='view',`value`='',`pid`='0',`token`='zujafi1473946152' WHERE `id` = 4 [ RunTime:0.0039s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='今日特价',`type`='view',`value`='http://shop.bosozo.com/index.php/Goods/detail/gid/1',`pid`='4',`token`='zujafi1473946152' WHERE `id` = 5 [ RunTime:0.0033s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='创业推荐',`type`='view',`value`='http://shop.bosozo.com/index.php/Index/index_tj',`pid`='4',`token`='zujafi1473946152' WHERE `id` = 6 [ RunTime:0.0045s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='进入商城',`type`='view',`value`='http://shop.bosozo.com/',`pid`='4',`token`='zujafi1473946152' WHERE `id` = 7 [ RunTime:0.0041s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='我是创客',`type`='view',`value`='',`pid`='0',`token`='zujafi1473946152' WHERE `id` = 9 [ RunTime:0.0035s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='我的会员',`type`='view',`value`='http://shop.bosozo.com/index.php/user/spokesman',`pid`='9',`token`='zujafi1473946152' WHERE `id` = 15 [ RunTime:0.0033s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='我的钱包',`type`='view',`value`='http://shop.bosozo.com/index.php/user/wealth',`pid`='9',`token`='zujafi1473946152' WHERE `id` = 16 [ RunTime:0.0042s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='我的二维码',`type`='view',`value`='http://shop.bosozo.com/index.php/user/qrcode',`pid`='9',`token`='zujafi1473946152' WHERE `id` = 17 [ RunTime:0.0032s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='个人中心',`type`='view',`value`='http://shop.bosozo.com/index.php/user',`pid`='9',`token`='zujafi1473946152' WHERE `id` = 18 [ RunTime:0.0030s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='平台简介',`type`='view',`value`='http://shop.bosozo.com/',`pid`='0',`token`='zujafi1473946152' WHERE `id` = 14 [ RunTime:0.0032s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='关于我们',`type`='click',`value`='关于我们',`pid`='14',`token`='zujafi1473946152' WHERE `id` = 19 [ RunTime:0.0036s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='平台公告',`type`='click',`value`='平台公告',`pid`='14',`token`='zujafi1473946152' WHERE `id` = 20 [ RunTime:0.0030s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='创客模式',`type`='click',`value`='创客模式',`pid`='14',`token`='zujafi1473946152' WHERE `id` = 21 [ RunTime:0.0038s ]
+SQL: UPDATE `gwshop_wx_menu` SET `name`='联系客服',`type`='view',`value`='http://wpa.qq.com/msgrd?v=3&uin=842419949&site=qq&menu=yes',`pid`='14',`token`='zujafi1473946152' WHERE `id` = 22 [ RunTime:0.0064s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000080s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000173s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005680s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005769s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000341s ]
+
+[ 2016-10-09T17:56:10+08:00 ] 59.56.44.58 /index.php/Admin/Wechat/pub_menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000098s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0011s ]
+SQL: SELECT * FROM `gwshop_wx_user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_menu` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` = 0 ORDER BY id ASC  [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` = 4  [ RunTime:0.0014s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` = 9  [ RunTime:0.0004s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` = 14  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `gwshop_wx_user` LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000059s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009666s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000264s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000761s ]
+
+[ 2016-10-09T17:56:11+08:00 ] 59.56.44.58 /index.php/Admin/Wechat/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000370s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000423s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0013s ]
+SQL: SELECT * FROM `gwshop_wx_user` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW TABLE STATUS WHERE NAME = 'gwshop_wx_menu' [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_menu` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` = 0 ORDER BY id ASC  [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` > 0 ORDER BY id ASC  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000159s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000251s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/c67ddeb914f7d39129bf9f2ad9a16c87.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021029s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021093s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000240s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000292s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000597s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+

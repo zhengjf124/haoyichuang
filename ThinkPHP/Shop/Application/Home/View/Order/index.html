@@ -1,0 +1,56 @@
+<include file="Public:head"/>
+<body>
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-27
+    描述：头部
+-->
+<header>
+    <a href="{:U('User/index')}">
+        <div class="back"></div>
+    </a>
+    我的订单
+</header>
+
+<section class="order">
+    <!--
+        作者：181331251@qq.com
+        时间：2016-08-28
+        描述：列表开始
+    -->
+    <ul class="item_ul">
+        <volist name="list" id="vo">
+            <li>
+                <a href="{:U('Order/details',array('order_sn'=>$vo['order_sn']))}">
+                <div class="order_code">
+                    订单编号：{$vo.order_sn}
+                    <time style="color: red;">{$vo.order_status_name}</time>
+                </div>
+                <volist name="vo.goods_info" id="go">
+                    <div class="left_img">
+                        <img src="{$go.goods_img}">
+                    </div>
+                    <div class="right_tex">
+                        <h1>{$go.goods_name}</h1>
+                        <p>{$go.goods_brief}</p>
+                        <div class="price"><span>￥</span>{$go.goods_price}<code>x{$go.goods_num}</code></div>
+                    </div>
+                    <div class="clear"></div>
+                </volist>
+                </a>
+                <div class="tatal">
+                    <span style="float: left;font-size: 16px;">订单总额：<span
+                            style="color: red;font-size: 18px;">￥{$vo.order_amount}</span></span>
+                    {$vo.html}
+                </div>
+            </li>
+        </volist>
+    </ul>
+</section>
+
+<div class="clear" style="height:6rem;"></div>
+
+
+</body>
+<script src="__PUBLIC__/home/js/myAjax.js"></script>
+</html>

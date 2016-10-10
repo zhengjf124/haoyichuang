@@ -1,0 +1,53 @@
+<include file="Public:head"/>
+<body>
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-27
+    描述：头部
+-->
+<header>
+    <a onclick="history.go(-1)">
+        <div class="back" ></div>
+    </a>
+    订单详情
+</header>
+
+<section class="order">
+    <div class="address">
+        <h1>收货人：{$info.consignee}&nbsp;&nbsp;&nbsp;{$info.mobile}</h1>
+        <p><img src="__PUBLIC__/home/images/ico_address.png">{$info.user_address}</p>
+    </div>
+
+    <!--
+        作者：181331251@qq.com
+        时间：2016-08-28
+        描述：列表开始
+    -->
+    <ul class="item_ul">
+        <!---->
+        <li>
+            <div class="order_code">
+                订单编号：{$info.order_sn}
+                <time>{$info.order_status}</time>
+            </div>
+            <volist name="info.goods_info" id="vo">
+                <div class="left_img">
+                    <img src="{$vo.goods_img}">
+                </div>
+                <div class="right_tex">
+                    <h1>{$vo.goods_name}</h1>
+                    <p>{$vo.goods_brief}</p>
+                    <div class="price"><span>￥</span>{$vo.goods_price}<code>x{$vo.goods_num}</code></div>
+                </div>
+                <div class="clear"></div>
+            </volist>
+        </li>
+
+    </ul>
+</section>
+
+<div class="clear" style="height:6rem;"></div>
+
+</body>
+
+</html>

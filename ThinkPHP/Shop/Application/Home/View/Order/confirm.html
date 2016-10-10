@@ -1,0 +1,66 @@
+<include file="Public:head"/>
+<body>
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-27
+    描述：头部
+-->
+<header>
+    <a onclick="history.go(-1)">
+        <div class="back"></div>
+    </a>
+    好易创
+</header>
+
+<section class="order">
+    <if condition="$address_info['id'] gt 0">
+        <div onclick="location.href='{:U('Useraddr/index',array('type'=>'order'))}'" class="address">
+            <h1>收货人：{$address_info.consignee}&nbsp;&nbsp;&nbsp;{$address_info.mobile}</h1>
+            <p><img src="__PUBLIC__/home/images/ico_address.png">{$address_info.address}</p>
+        </div>
+        <else/>
+        <div class="address" onclick="location.href='{:U('Useraddr/index',array('type'=>'order'))}'"
+             style="height: auto; padding: 15px; box-sizing:border-box; font-size: 16px;">
+            <div>请选择收货地址</div>
+        </div>
+    </if>
+    <input type="hidden" id="address_id" value="{$address_info['id']}">
+    <!--
+        作者：181331251@qq.com
+        时间：2016-08-28
+        描述：列表开始
+    -->
+    <ul class="item_ul">
+        <volist name="goods_list" id="vo">
+            <li>
+                <div class="left_img">
+                    <img src="{$vo.goods_img}">
+                </div>
+                <div class="right_tex">
+                    <h1>{$vo.goods_name}</h1>
+                    <!--<p>{$vo.goods_desc}</p>-->
+                    <div class="price"><span>￥</span>{$vo.goods_price}<code>x{$vo.goods_num}</code></div>
+                </div>
+                <div class="clear"></div>
+            </li>
+        </volist>
+        <li>
+            <div class="tatal">
+                共{$total_num}件商品 合计： <span class="price"><span>￥</span>{$total_money}</span>
+            </div>
+            <input type="hidden" id="order_sn" value="0">
+        </li>
+    </ul>
+    <button id="add_order_submit" class="tixian">提交订单</button>
+</section>
+
+<div class="clear" style="height:6rem;"></div>
+
+</body>
+<script src="__PUBLIC__/home/js/myAjax.js"></script>
+<script type="text/javascript">
+
+
+
+</script>
+</html>

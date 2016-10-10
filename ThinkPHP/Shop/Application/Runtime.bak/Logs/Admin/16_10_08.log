@@ -1,0 +1,515 @@
+[ 2016-10-08T08:44:28+08:00 ] 59.56.34.115 /admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000091s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000468s ]
+
+[ 2016-10-08T08:44:28+08:00 ] 59.56.34.115 /index.php/Admin/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000058s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000421s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005132s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000136s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000165s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000408s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000442s ]
+
+[ 2016-10-08T08:44:28+08:00 ] 59.56.34.115 /index.php/Admin/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000084s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000645s ]
+
+[ 2016-10-08T08:44:47+08:00 ] 59.56.34.115 /index.php?m=Admin&c=Login&a=login&t=0.30473858839832246
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000079s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000433s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `gwshop_admin` INNER JOIN gwshop_admin_role ON gwshop_admin.role_id=gwshop_admin_role.role_id  WHERE `user_name` = 'admin ' AND `password` = '1ec6c02ecd57e229429739a521ac6bfa' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_log` [ RunTime:0.0005s ]
+SQL: INSERT INTO `gwshop_admin_log` (`log_time`,`admin_id`,`log_info`,`log_ip`,`log_url`) VALUES ('1475887487','1','后台登录','59.56.34.115','/index.php/Admin/Login/login') [ RunTime:0.0212s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0009s ]
+SQL: UPDATE `gwshop_admin` SET `last_login`='1475887487',`last_ip`='59' WHERE `id` = 1 [ RunTime:0.0043s ]
+
+[ 2016-10-08T08:44:47+08:00 ] 59.56.34.115 /index.php/Admin/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000090s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000585s ]
+SQL: SHOW COLUMNS FROM `gwshop_system_module` [ RunTime:0.0008s ]
+SQL: SELECT * FROM `gwshop_system_module` WHERE ( level>1 AND visible=1 ) ORDER BY mod_id ASC  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0007s ]
+SQL: SELECT * FROM `gwshop_admin` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000109s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000184s ]
+NOTIC: [8] Undefined variable: upgradeMsg /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 50 行.
+NOTIC: [8] Undefined variable: upgradeMsg /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 53 行.
+NOTIC: [8] Undefined variable: order_amount /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/117e67b1cdf83120ad1d6011985959c2.php 第 265 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011486s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011537s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000179s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000702s ]
+
+[ 2016-10-08T08:44:50+08:00 ] 59.56.34.115 /index.php/Admin/Index/welcome.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000124s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000176s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+NOTIC: [2] file_get_contents(./Application/Admin/Conf/version.txt): failed to open stream: No such file or directory /home/wwwroot/txdemo/Shop/Application/Admin/Controller/IndexController.class.php 第 52 行.
+SQL: SELECT VERSION() as version [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: version /home/wwwroot/txdemo/Shop/Application/Admin/Controller/IndexController.class.php 第 54 行.
+SQL: SHOW COLUMNS FROM `gwshop_order` [ RunTime:0.0014s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475801090  ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_order` WHERE ( add_time>1475801090 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_goods` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `gwshop_article` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_article` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_user` [ RunTime:0.0007s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( last_login>1475801090 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_user` WHERE ( reg_time>1475801090 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `gwshop_comments` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_comments` WHERE ( status=0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000155s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/dde7b494b6eaf8d1ebea54f5b28ad048.php 第 67 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007769s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007836s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000200s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000490s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2016-10-08T08:44:50+08:00 ] 59.56.34.115 /index.php/Admin/System/login_task.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000399s ]
+SQL: SHOW COLUMNS FROM `gwshop_cart` [ RunTime:0.0008s ]
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1475883890 )
+ERR: 1054:Unknown column 'add_time' in 'where clause'
+ [ SQL语句 ] : DELETE FROM `gwshop_cart` WHERE ( user_id = 0 and  add_time < 1475883890 )
+
+[ 2016-10-08T13:46:08+08:00 ] 59.56.34.115 /index.php/Admin/Goods/categoryList.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000092s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods` [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `gwshop_goods_category` [ RunTime:0.0022s ]
+SQL: SELECT * FROM  gwshop_goods_category ORDER BY parent_id , sort_order ASC [ RunTime:0.0029s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000125s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000237s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 67 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 111 行.
+NOTIC: [8] Use of undefined constant level - assumed 'level' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 113 行.
+NOTIC: [8] Undefined index: have_son /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 114 行.
+NOTIC: [8] Undefined index: mobile_name /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 117 行.
+NOTIC: [8] Use of undefined constant is_hot - assumed 'is_hot' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Undefined index: is_hot /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 119 行.
+NOTIC: [8] Use of undefined constant is_show - assumed 'is_show' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/28abfce3fd90b3878849cb665758e926.php 第 122 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.032135s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.032254s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000650s ]
+
+[ 2016-10-08T14:28:26+08:00 ] 59.56.34.115 /index.php/Admin/Wechat/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000113s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000546s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000612s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `gwshop_wx_user`  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000069s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/8d290800e6284f8e2b06873a2b52d26a.php 第 68 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/8d290800e6284f8e2b06873a2b52d26a.php 第 114 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.026815s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.026957s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000561s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2016-10-08T14:28:31+08:00 ] 59.56.34.115 /index.php/Admin/Wechat/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000089s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000842s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `gwshop_wx_user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW TABLE STATUS WHERE NAME = 'gwshop_wx_menu' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_menu` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` = 0 ORDER BY id ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` > 0 ORDER BY id ASC  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000219s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/c67ddeb914f7d39129bf9f2ad9a16c87.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.033641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.033700s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000253s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000659s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000733s ]
+
+[ 2016-10-08T14:28:35+08:00 ] 59.56.34.115 /index.php/Admin/Wechat/text.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000107s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000549s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000627s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `gwshop_wx_user` LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_keyword` [ RunTime:0.0006s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `gwshop_wx_keyword` WHERE `token` = 'zujafi1473946152' AND `type` = 'TEXT' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT k.id,k.keyword,t.text FROM gwshop_wx_keyword k LEFT JOIN gwshop_wx_text AS t ON t.id = k.pid WHERE k.token = 'zujafi1473946152' AND type = 'TEXT' ORDER BY t.createtime DESC LIMIT 0,10 [ RunTime:0.0008s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000106s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/4c47a1f59aafccbbd6ab53a71eda2f4d.php 第 68 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/4c47a1f59aafccbbd6ab53a71eda2f4d.php 第 114 行.
+NOTIC: [8] Use of undefined constant id - assumed 'id' /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/4c47a1f59aafccbbd6ab53a71eda2f4d.php 第 114 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008513s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000163s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000196s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000501s ]
+
+[ 2016-10-08T14:28:36+08:00 ] 59.56.34.115 /index.php/Admin/Wechat/menu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000064s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000501s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_user` [ RunTime:0.0009s ]
+SQL: SELECT * FROM `gwshop_wx_user` LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW TABLE STATUS WHERE NAME = 'gwshop_wx_menu' [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_wx_menu` [ RunTime:0.0005s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` = 0 ORDER BY id ASC  [ RunTime:0.0003s ]
+SQL: SELECT * FROM `gwshop_wx_menu` WHERE `token` = 'zujafi1473946152' AND `pid` > 0 ORDER BY id ASC  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000207s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/c67ddeb914f7d39129bf9f2ad9a16c87.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015657s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015712s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000223s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000535s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2016-10-08T14:29:25+08:00 ] 59.56.34.115 /index.php/Admin/Admin/role.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000057s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000358s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000420s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_role` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `gwshop_admin_role` ORDER BY role_id desc  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000156s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/8fe92ffae0c26a83a87f9d06d7325458.php 第 67 行.
+NOTIC: [8] Undefined variable: page /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/8fe92ffae0c26a83a87f9d06d7325458.php 第 117 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.083065s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.083149s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000205s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000513s ]
+
+[ 2016-10-08T14:29:26+08:00 ] 59.56.34.115 /index.php/Admin/Admin/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000063s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000398s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin` [ RunTime:0.0012s ]
+SQL: SELECT * FROM `gwshop_admin`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_role` [ RunTime:0.0010s ]
+SQL: SELECT * FROM `gwshop_admin_role`  [ RunTime:0.0012s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000094s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000188s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/035f5ecc7c83c98bb8cdefbe91ae7f56.php 第 67 行.
+NOTIC: [8] Undefined variable: page /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/035f5ecc7c83c98bb8cdefbe91ae7f56.php 第 126 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.030828s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.030895s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000208s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000531s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000593s ]
+
+[ 2016-10-08T17:29:13+08:00 ] 59.56.34.115 /index.php/Admin/Admin/role.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000065s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000388s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+SQL: SHOW COLUMNS FROM `gwshop_admin_role` [ RunTime:0.0006s ]
+SQL: SELECT * FROM `gwshop_admin_role` ORDER BY role_id desc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000050s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [8] Undefined variable: navigate_admin /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/8fe92ffae0c26a83a87f9d06d7325458.php 第 67 行.
+NOTIC: [8] Undefined variable: page /home/wwwroot/txdemo/Shop/Application/Runtime/Cache/Admin/8fe92ffae0c26a83a87f9d06d7325458.php 第 117 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007284s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000150s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000399s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000443s ]
+

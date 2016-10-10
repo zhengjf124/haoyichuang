@@ -1,0 +1,108 @@
+<include file="Public:head" />
+
+<body>
+    <div class="container ct-pdt ct-pdb">
+        <!--顶部-->
+        <div class="header">
+            <div class="new-search">
+                <input type="text" name="" class="txt" placeholder="请输入关键词">
+                <input type="submit" name="" class="btn" value="">
+            </div>
+            <a href="{:U('User/qrcode')}" class="qr-code"></a>
+        </div>
+        <!--顶部:over-->
+        <!--分类-->
+        <div class="cate">
+            <div class="swiper-container swiper2">
+                <div class="swiper-wrapper" id="adv">
+                    <volist name="category_list" id="vo">
+                        <div class="swiper-slide">
+                            <ul>
+                                <volist name="vo" id="se">
+                                    <li>
+                                        <a href="{:U('Goods/goodsList',array('cid'=>$se['id']))}"><img src="{$se.type_img}">
+                                            <h3>{$se.type_name}</h3></a>
+                                    </li>
+                                </volist>
+                            </ul>
+                        </div>
+                    </volist>
+                </div>
+                <div class="pagination pagination2"></div>
+            </div>
+        </div>
+        <!--分类:over-->
+        <!--banner-->
+        <div class="new-bn">
+            <div class="swiper-container swiper1">
+                <div class="swiper-wrapper" id="adv">
+                    <volist name="ad_liost" id="vo">
+                        <div class="swiper-slide">
+                            <a href="{$vo.ad_link}"><img src="{$vo.ad_code}"></a>
+                        </div>
+                    </volist>
+                </div>
+                <div class="pagination pagination1"></div>
+            </div>
+        </div>
+        <!--banner:over-->
+        <!--特价-->
+        <div class="special-offer">
+            <ul>
+                <volist name="tejia_goods" id="vo">
+                    <li>
+                        <a href="{:U('Goods/detail',array('gid'=>$vo['id']))}">
+                            <div class="name">今日特价</div>
+                            <div class="brief">{$vo.goods_name}</div>
+                            <div class="img"><span></span><img src="{$vo.goods_img}"></div>
+                        </a>
+                    </li>
+                </volist>
+<!--                 <li>
+                    <a href="#">
+                        <div class="name">今日特价</div>
+                        <div class="brief">全新产品上架</div>
+                        <div class="img"><span></span><img src="__PUBLIC__/home/images/pic_spec2.png"></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <div class="name">今日特价</div>
+                        <div class="brief">新品特价</div>
+                        <div class="img"><span></span><img src="__PUBLIC__/home/images/pic_spec3.png"></div>
+                    </a>
+                </li> -->
+            </ul>
+        </div>
+        <!--特价:over-->
+        <!--创业推荐-->
+        <div name="test_md" class="recommend">
+            <div class="recommend-top">
+                <img src="__PUBLIC__/home/images/icon_tuijian.png"><strong>创业推荐</strong>
+            </div>
+            <div class="recommend-bottom" id="list_container">
+                <ul id="lists">
+                </ul>
+            </div>
+        </div>
+        <!--创业推荐:over-->
+        <!--底部-->
+        <div class="footer">
+            <a href="{:U('Index/index')}" class="active"><img src="__PUBLIC__/home/images/new_home.png" class="img1"><img src="__PUBLIC__/home/images/new_home_active.png" class="img2">
+                <h3>商城</h3></a>
+            <a href="{:U('Goods/categoryList')}"><img src="__PUBLIC__/home/images/new_cate.png" class="img1"><img src="__PUBLIC__/home/images/new_cate_active.png" class="img2">
+                <h3>分类</h3></a>
+            <a href="{:U('Cart/index')}"><img src="__PUBLIC__/home/images/new_cart.png" class="img1"><img src="__PUBLIC__/home/images/new_cart_active.png" class="img2">
+                <h3>购物车</h3></a>
+            <a href="{:U('User/index')}"><img src="__PUBLIC__/home/images/new_user.png" class="img1"><img src="__PUBLIC__/home/images/new_user_active.png" class="img2">
+                <h3>个人中心</h3></a>
+        </div>
+        <!--底部:over-->
+    </div>
+    <script src="__PUBLIC__/home/js/idangerous.swiper-1.9.1.min.js"></script>
+    <script src="__PUBLIC__/home/js/new.js"></script>
+    <script src="__PUBLIC__/home/js/dropload.min.js"></script>
+    <script src="__PUBLIC__/home/js/drapDown.js"></script>
+</body>
+
+</html>

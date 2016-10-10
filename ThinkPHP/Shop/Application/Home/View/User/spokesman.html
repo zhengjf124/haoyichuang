@@ -1,0 +1,75 @@
+<include file="Public:head"/>
+<body>
+<!--
+    作者：181331251@qq.com
+    时间：2016-08-27
+    描述：头部
+-->
+<header>
+    <a href="{:U('User/index')}">
+        <div class="back"></div>
+    </a>
+    我的会员
+</header>
+
+<section class="spokesman">
+
+    <div class="header_ico">
+        <img src="{$user_info.headimgurl}">
+        <div class="text">
+            <h1>{$user_info.nick_name}</h1>
+            <code>{$user_level}</code>
+        </div>
+    </div>
+    <!--
+        作者：181331251@qq.com
+        时间：2016-08-28
+        描述：搜索
+    -->
+    <div class="search_box">
+        <form action="" method="get">
+            <div class="clear" style="height: 0.6rem;"></div>
+            <div class="search">
+                <input type="text" value="{$_GET['nickname']}" name="nickname" placeholder="请输入关键词">
+                <div class="ico"></div>
+                <button type="submit">搜 索</button>
+            </div>
+        </form>
+    </div>
+
+    <!--
+        作者：181331251@qq.com
+        时间：2016-08-28
+        描述：内容区块
+    -->
+    <div class="tab_box">
+        <ul class="tab_title_ul">
+            <li onclick="location.href='{:U('spokesman')}'"
+            <if condition="$_GET['type'] neq 'second' && $_GET['type'] neq 'third'"> class="active"</if>
+            style="width: 33.33%">一级会员</li>
+            <li onclick="location.href='{:U('spokesman',array('type'=>'second'))}'"
+            <if condition="$_GET['type'] eq 'second'"> class="active"</if>
+            style="width: 33.33%">二级会员</li>
+            <li onclick="location.href='{:U('spokesman',array('type'=>'third'))}'"
+            <if condition="$_GET['type'] eq 'third'"> class="active"</if>
+            style="width: 33.33%">三级会员</li>
+        </ul>
+
+        <ul class="tab_list_ul">
+            <li class="active">
+                <volist name="user_list" id="vo">
+                    <p>{$vo.nick_name} <span>{$vo.user_name}</span></p>
+                </volist>
+            </li>
+        </ul>
+    </div>
+
+</section>
+
+
+<div class="clear" style="height:6rem;"></div>
+
+
+</body>
+
+</html>

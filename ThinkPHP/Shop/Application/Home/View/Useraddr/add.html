@@ -1,0 +1,135 @@
+<include file="Public:head"/>
+<script type="text/javascript" src="__PUBLIC__/home/js/json-array-of-province.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/json-array-of-city.js"></script>
+<script type="text/javascript" src="__PUBLIC__/home/js/json-array-of-district.js"></script>
+<link href="__PUBLIC__/home/css/address.css?id=2" rel="stylesheet" type="text/css">
+<body>
+	<!--
+    	作者：181331251@qq.com
+    	时间：2016-08-29
+    	描述：地址
+    -->
+
+		<div class="sheng_box" style="display:none;" id="province">
+	        <div class="titleWrap"><h2><strong>省份选择</strong></h2><span class="back"><a onClick="backdiv('1')">返回</a></span></div>
+	        <ul id="provinceDiv">
+
+	        </ul>
+	    </div>
+
+	    <div class="city_box"  style="display:none;" id="city">
+	        <div class="titleWrap"><h2><strong>市选择</strong></h2><span class="back"><a onClick="backdiv('2')">返回</a></span></div>
+	        <ul id="cityDiv">
+
+	        </ul>
+	    </div>
+
+	    <div class="district_box" style="display:none;" id="district">
+	        <div class="titleWrap"><h2><strong>区/县选择</strong></h2><span class="back"><a onClick="backdiv('3')">返回</a></span></div>
+	        <ul id="districtDiv">
+	            <li></li>
+	            <li></li>
+	        </ul>
+	    </div>
+
+	<!--
+    	作者：181331251@qq.com
+    	时间：2016-08-27
+    	描述：头部
+    -->
+	<header>
+		<a href="{:U('Useraddr/index')}"><div class="back"></div></a>
+		新增地址
+	</header>
+
+	<div class="clear" style="height:1rem;"></div>
+	<section class="address">
+		<ul class="list_ul">
+			<input type="hidden" id="address_id" value="{$info.id}">
+			<li><label>收货人</label><input type="text" value="{$info.consignee}" id="consignee" placeholder="请输入姓名"></li>
+			<li><label>手机号</label><input type="text" value="{$info.mobile}" id="mobile" placeholder="请输入手机"></li>
+			<li onClick="showProvince();"><label>省/直辖市</label><input id="sheng" value="{$info.province}" type="text" name="" placeholder=""><div class="after_ico"></div></li>
+			<li onClick="showProvince();"><label>市</label><input id="shiqu" type="text" value="{$info.city}" name="" placeholder=""><div class="after_ico"></div></li>
+			<li onClick="showProvince();"><label>区/县</label><input id="xuang" type="text" value="{$info.district}" name="" placeholder=""><div class="after_ico"></div></li>
+			<li><label>详细地址</label><input type="text" id="address" value="{$info.address}" placeholder="请输入详细地址"></li>
+			<input type="hidden" id="type" value="{$type}">
+		</ul>
+	</section>
+
+	<button <if condition="ACTION_NAME eq 'add'"> id="add_address_submit" <elseif condition="ACTION_NAME eq 'edit'" /> id="edit_address_submit" </if> class="add_button">确定</button>
+
+	<div class="clear" style="height:6rem;"></div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/home/js/myAjax.js"></script>
+<script>
+function showProvince(){
+	var list = eval(json_provice);
+	var html = '';
+	$.each(list,function(i,item){
+		html += ' <li onclick="showCityOfProvince(\''+item.code+'\''+','+'\''+item.name+'\')"><a href="javascript:;">'+item.name+'</a></li>'
+	});
+	$('#provinceDiv').append(html);
+	showhidediv('province');
+}
+
+function showCityOfProvince(p_code,p_name){
+	document.getElementById('sheng').value=p_name;
+	var city_list = eval(json_city);
+	var city_html = '';
+		//alert(pcode.substr(0,2));
+	$.each(city_list,function(i,item){
+		if(item.code.substr(0,2) == p_code.substr(0,2)){
+			city_html += ' <li onclick="showDistrictOfCity(\''+item.code+'\''+','+'\''+item.name+'\')"><a href="#">'+item.name+'</a></li>';
+		}
+	});
+	$('#cityDiv').empty();
+	$('#cityDiv').append(city_html);
+	showhidediv('city');
+}
+
+function showDistrictOfCity(city_code,city_name){
+	document.getElementById('shiqu').value=city_name;
+	var district_list = eval(json_district);
+	var district_html = '';
+		//alert(pcode.substr(0,2));
+	$.each(district_list,function(i,item){
+		if(item.code.substr(0,4) == city_code.substr(0,4)){
+			//district_html += ' <li><a href="#">'+item.name+'</a></li>';
+			district_html += ' <li onclick="okProvinceCity(\''+item.code+'\''+','+'\''+item.name+'\')"><a href="#">'+item.name+'</a></li>';
+		}
+	});
+	$('#districtDiv').empty();
+	$('#districtDiv').append(district_html);
+	showhidediv('district');
+}
+
+function okProvinceCity(d_code,d_name){
+	document.getElementById('xuang').value=d_name;
+	showhidediv('province');
+	showhidediv('city');
+	showhidediv('district');
+}
+
+function backdiv(whereNum){
+	if(whereNum == 1){
+		showhidediv('province');
+	}else if(whereNum == 2){
+		showhidediv('city');
+	}else if(whereNum == 3){
+		showhidediv('district');
+	}
+}
+
+//创建一个showhidediv的方法，直接跟ID属性
+function showhidediv(id){
+	var sbtitle=document.getElementById(id);
+	if(sbtitle){
+	   if(sbtitle.style.display=='block'){
+			sbtitle.style.display='none';
+	   }else{
+			sbtitle.style.display='block';
+	   }
+	}
+}
+</script>
+</html>

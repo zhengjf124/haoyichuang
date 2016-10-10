@@ -1,0 +1,41 @@
+<include file="Public:head"/>
+<body>
+<div class="container ct-pdt ct-pdb">
+    <!--顶部-->
+    <div class="header">
+        <a href="javascript:history.back();" class="return"></a>
+        <div class="new-search ny">
+            <input type="text" name="" class="txt" placeholder="请输入关键词">
+            <input type="submit" name="" class="btn" value="">
+        </div>
+        <a href="{:U('User/qrcode')}" class="qr-code"></a>
+    </div>
+    <!--顶部:over-->
+
+    <div class="recommend-bottom" id="list_container">
+        <ul id="lists">
+
+        </ul>
+    </div>
+    <input type="hidden" id="cat_id" value="{$cat_id}">
+    <!--底部-->
+    <div class="footer">
+        <a href="{:U('Index/index')}"><img src="__PUBLIC__/home/images/new_home.png" class="img1"><img
+                src="__PUBLIC__/home/images/new_home_active.png" class="img2">
+            <h3>商城</h3></a>
+        <a href="{:U('Goods/categoryList')}" class="active"><img src="__PUBLIC__/home/images/new_cate.png" class="img1"><img
+                src="__PUBLIC__/home/images/new_cate_active.png" class="img2">
+            <h3>分类</h3></a>
+        <a href="{:U('Cart/index')}"><img src="__PUBLIC__/home/images/new_cart.png" class="img1"><img
+                src="__PUBLIC__/home/images/new_cart_active.png" class="img2">
+            <h3>购物车</h3></a>
+        <a href="{:U('User/index')}"><img src="__PUBLIC__/home/images/new_user.png" class="img1"><img
+                src="__PUBLIC__/home/images/new_user_active.png" class="img2">
+            <h3>个人中心</h3></a>
+    </div>
+    <!--底部:over-->
+</div>
+</body>
+<script src="__PUBLIC__/home/js/dropload.min.js"></script>
+<script src="__PUBLIC__/home/js/drapDownGoods.js"></script>
+</html>

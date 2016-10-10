@@ -1,0 +1,64 @@
+<include file="Public:head"/>
+<body>
+<!--
+作者：181331251@qq.com
+时间：2016-08-27
+描述：头部
+-->
+<header>
+    <a href="{:U('User/index')}">
+        <div class="back"></div>
+    </a>
+    提现申请
+</header>
+<div class="cash">
+    <div class="cash-top"><span>支付信息</span></div>
+    <div class="cash-bottom">
+        <ul>
+            <li>
+                <span>支付方式</span>
+                <!-- <input type="text" id="pay_type" class="txt" placeholder="支付宝/微信/银行卡"> -->
+                <select id="pay_type" class="txt" >
+                    <option value="支付宝" >支付宝</option>
+                    <option value="银行卡" >银行卡</option>
+                </select>
+            </li>
+            <li>
+                <span>支付帐号</span>
+                <input type="text" id="pay_accounts" class="txt" placeholder="请输入帐号">
+            </li>
+            <li>
+                <span>提现金额</span>
+                <input type="text" id="money" class="txt" placeholder="请输入金额">
+            </li>
+        </ul>
+    </div>
+</div>
+<section class="wealth">
+    <article class="tixian_list">
+        <ul class="tixian_tab_title">
+            <li>编号</li>
+            <li>金额</li>
+            <li>状态</li>
+        </ul>
+        <div class="list_box">
+            <volist name="list" id="vo">
+                <ul class="list">
+                    <li>{$vo.sn}</li>
+                    <li>￥{$vo.reality_money}</li>
+                    <li>{$vo.withdrawal_status}</li>
+                </ul>
+            </volist>
+            <!--<ul class="list">
+                <li>2016010112</li>
+                <li>￥20</li>
+                <li><span class="c-fe9423">审核中</span></li>
+            </ul>-->
+        </div>
+    </article>
+    <button id="withdraw_deposit_submit" class="tixian">我要提现</button>
+</section>
+<div class="clear" style="height:6rem;"></div>
+</body>
+<script type="text/javascript" src="__PUBLIC__/home/js/myAjax.js"></script>
+</html>
